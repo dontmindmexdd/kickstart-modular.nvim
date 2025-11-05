@@ -34,6 +34,10 @@ return {
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
+      --
+      require('mini.icons').setup()
+      MiniIcons.mock_nvim_web_devicons()
+      MiniIcons.tweak_lsp_kind()
     end,
   },
 }

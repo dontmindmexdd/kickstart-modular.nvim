@@ -6,20 +6,32 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
     'MunifTanjim/nui.nvim',
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
-  },
-  opts = {
-    filesystem = {
-      window = {
-        mappings = {
-          ['\\'] = 'close_window',
-        },
-      },
+    {
+      '<leader>e',
+      function()
+        require('neo-tree.command').execute { toggle = true }
+      end,
+      desc = 'NeoTree reveal',
+      silent = true,
+    },
+    {
+      '<leader>ge',
+      function()
+        require('neo-tree.command').execute { source = 'git_status', toggle = true }
+      end,
+      desc = 'Git Explorer',
+    },
+    {
+      '<leader>be',
+      function()
+        require('neo-tree.command').execute { source = 'buffers', toggle = true }
+      end,
+      desc = 'Buffer Explorer',
     },
   },
+  opts = {},
 }
