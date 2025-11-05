@@ -32,6 +32,24 @@ return {
       end,
       desc = 'Buffer Explorer',
     },
+    {
+      '<leader>o',
+      function()
+        if vim.bo.filetype == 'neo-tree' then
+          vim.cmd.wincmd 'p'
+        else
+          vim.cmd.Neotree 'focus'
+        end
+      end,
+      desc = 'Focus Neotree',
+    },
   },
-  opts = {},
+  opts = {
+    filesystem = {
+      filtered_items = { hide_hidden = false, hide_dotfiles = false },
+    },
+    window = {
+      position = 'right',
+    },
+  },
 }

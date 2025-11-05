@@ -8,7 +8,7 @@ return {
       --  - va)  - [V]isually select [A]round [)]paren
       --  - yinq - [Y]ank [I]nside [N]ext [Q]uote
       --  - ci'  - [C]hange [I]nside [']quote
-      require('mini.ai').setup { n_lines = 500 }
+      require('mini.ai').setup { n_lines = 500, search_method = 'cover' }
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
@@ -42,6 +42,8 @@ return {
       require('mini.misc').setup()
       MiniMisc.setup_termbg_sync()
       MiniMisc.setup_restore_cursor()
+
+      require('mini.jump').setup()
     end,
   },
 }
