@@ -46,7 +46,7 @@ return {
   },
   opts = {
     filesystem = {
-      filtered_items = { hide_hidden = false, hide_dotfiles = false },
+      filtered_items = { hide_gitignored = true, hide_hidden = false, hide_dotfiles = false },
     },
     window = {
       position = 'right',
