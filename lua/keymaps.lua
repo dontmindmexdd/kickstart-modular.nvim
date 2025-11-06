@@ -39,6 +39,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 vim.keymap.set('n', '<A-w>', '<Cmd>bd<CR>', { desc = 'Delete buffer' })
 
+vim.keymap.set('n', '<leader>tb', ':exec &bg=="light"? "set bg=dark" : "set bg=light"<CR>', { desc = 'Toggle background', noremap = true, silent = true })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
