@@ -32,7 +32,21 @@ return {
       require('mini.pairs').setup()
 
       require('mini.tabline').setup()
+
+      require('mini.bufremove').setup()
+
+      require('mini.move').setup()
     end,
+    keys = {
+      {
+        '<leader>w',
+        function()
+          require('mini.bufremove').delete()
+        end,
+        desc = 'Delete buffer',
+      },
+      { '<leader>bw', '<Cmd>%bd<CR>', desc = 'Delete all buffers' },
+    },
   },
 }
 -- vim: ts=2 sts=2 sw=2 et
