@@ -27,6 +27,7 @@ return {
       MiniMisc.setup_restore_cursor()
 
       require('mini.jump').setup()
+      require('mini.jump2d').setup()
 
       require('mini.pairs').setup()
 

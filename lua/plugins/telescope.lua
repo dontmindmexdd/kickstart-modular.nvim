@@ -44,6 +44,7 @@ return {
       vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Grep' })
       vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'Diagnostics' })
       vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = 'Resume' })
+      vim.keymap.set('n', '<leader>fo', builtin.jumplist, { desc = 'Jumplist' })
       vim.keymap.set('n', '<leader>,', builtin.buffers, { desc = 'Buffers' })
       vim.keymap.set('n', '<leader><leader>', builtin.find_files, { desc = 'Find files' })
 

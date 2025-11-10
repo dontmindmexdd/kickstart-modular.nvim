@@ -151,6 +151,7 @@ return {
             },
           },
         },
+        vtsls = {},
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -166,7 +167,7 @@ return {
         automatic_installation = false,
       }
 
-      require('typescript-tools').setup {}
+      -- require('typescript-tools').setup {}
     end,
   },
 }
