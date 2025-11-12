@@ -151,7 +151,7 @@ return {
             },
           },
         },
-        vtsls = {},
+        stylua = {},
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -162,12 +162,12 @@ return {
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-      require('mason-lspconfig').setup {
-        ensure_installed = {},
-        automatic_installation = false,
-      }
+      require('typescript-tools').setup {}
 
-      -- require('typescript-tools').setup {}
+      for name, opts in pairs(servers) do
+        vim.lsp.config(name, opts)
+        vim.lsp.enable(name)
+      end
     end,
   },
 }
